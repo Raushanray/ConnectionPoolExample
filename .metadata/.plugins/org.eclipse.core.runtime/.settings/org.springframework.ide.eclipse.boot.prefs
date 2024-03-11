@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jdbc=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.mysql=1
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=ConnectionPoolExample
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=3.2.3.RELEASE
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=This project is understanding for Connection pool
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.pool
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=17
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=ConnectionPoolExample
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.pool
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=0.0.1-SNAPSHOT
+org.springframework.ide.eclipse.boot.wizard.initializr.url=https\://start.spring.io\n
