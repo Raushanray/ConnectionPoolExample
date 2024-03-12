@@ -11,10 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.List;
 import java.util.Map;
 
-@SpringBootApplication(exclude = {
-		JdbcTemplateAutoConfiguration.class,
-		DataSourceAutoConfiguration.class
-})
+@SpringBootApplication
 public class ConnectionPoolExampleApplication implements CommandLineRunner {
 
 	@Autowired
@@ -26,16 +23,16 @@ public class ConnectionPoolExampleApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("App started");
-		jdbcTemplate.update("insert into users(id,name,about) values(4,'Maharani', 'Product Manager')");
-		System.out.println("data added");
-
-		List<Map<String, Object>> queryForList = jdbcTemplate.queryForList("select * from users");
-		queryForList.forEach((item)->{
-			System.out.println("id: " + item.get("id"));
-			System.out.println("name: " + item.get("name"));
-			System.out.println("about: " + item.get("about"));
-			System.out.println("=====================================");
-		});
+//		System.out.println("App started");
+//		jdbcTemplate.update("insert into users(id,name,about) values(4,'Maharani', 'Product Manager')");
+//		System.out.println("data added");
+//
+//		List<Map<String, Object>> queryForList = jdbcTemplate.queryForList("select * from users");
+//		queryForList.forEach((item)->{
+//			System.out.println("id: " + item.get("id"));
+//			System.out.println("name: " + item.get("name"));
+//			System.out.println("about: " + item.get("about"));
+//			System.out.println("=====================================");
+//		});
 	}
 }
