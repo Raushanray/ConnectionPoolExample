@@ -1,5 +1,6 @@
 package com.pool.config;
 
+import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -30,11 +31,18 @@ public class DataConfig {
 //        dataSource.setPassword(password);
 
 
-        HikariDataSource dataSource = new HikariDataSource();
+//        HikariDataSource dataSource = new HikariDataSource();
+//        dataSource.setJdbcUrl(url);
+//        dataSource.setUsername(username);
+//        dataSource.setPassword(password);
+//        return dataSource;
+
+        ComboPooledDataSource dataSource = new ComboPooledDataSource();
         dataSource.setJdbcUrl(url);
-        dataSource.setUsername(username);
+        dataSource.setUser(username);
         dataSource.setPassword(password);
         return dataSource;
+
     }
 
     @Bean

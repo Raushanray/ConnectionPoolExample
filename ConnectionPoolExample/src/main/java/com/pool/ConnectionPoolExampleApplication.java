@@ -27,7 +27,7 @@ public class ConnectionPoolExampleApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("App started");
-		jdbcTemplate.update("insert into users(id,name,about) values(3,'Narayani', 'Product Manager')");
+		jdbcTemplate.update("insert into users(id,name,about) values(4,'Maharani', 'Product Manager')");
 		System.out.println("data added");
 
 		List<Map<String, Object>> queryForList = jdbcTemplate.queryForList("select * from users");
