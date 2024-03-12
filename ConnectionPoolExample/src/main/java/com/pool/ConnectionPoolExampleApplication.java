@@ -4,12 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 import java.util.Map;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = {
+		JdbcTemplateAutoConfiguration.class,
+		DataSourceAutoConfiguration.class
+})
 public class ConnectionPoolExampleApplication implements CommandLineRunner {
 
 	@Autowired
@@ -22,6 +27,9 @@ public class ConnectionPoolExampleApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("App started");
+		jdbcTemplate.update("insert into users(id,name,about) values(2,'Rashi', 'web developer')");
+		System.out.println("data added");
+
 		List<Map<String, Object>> queryForList = jdbcTemplate.queryForList("select * from users");
 		queryForList.forEach((item)->{
 			System.out.println("id: " + item.get("id"));
